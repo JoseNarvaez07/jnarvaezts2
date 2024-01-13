@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jnarvaezts2.Vistas.vPrincipal"
+             Title="vPrincipal">
+    <VerticalStackLayout Spacing="15">
+
+        <Label x:Name="lblUsuario"
+               FontSize="14"
+               HorizontalTextAlignment="Center"
+               TextColor="Blue"/>
+
+        <Label 
+            Text="SISTEMA DE CALIFICACIONES"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+
+        <Border Stroke="Gray">
+            <Picker x:Name="pkEstudiantes" Title="Estudiantes">
+                <Picker.Items>
+                    <x:String>Stalin Sarango</x:String>
+                    <x:String>José Narvez</x:String>
+                    <x:String>Rodney Escobar</x:String>
+                    <x:String>Luis Vega</x:String>
+                    <x:String>Daniel Rojas</x:String>
+                </Picker.Items>
+            </Picker>
+        </Border>
+
+        <Label x:Name="lblSeleccionado"
+               TextColor="Blue"
+               FontSize="14"
+               HorizontalTextAlignment="Center"
+                    Text=""/>
+
+        <Button x:Name="btnMostrar"
+                Text="Mostrar Alumno"
+                Clicked="btnMostrar_Clicked"/>
+
+        <!--CAJA DE TEXTO PARCIAL 1-->
+        <Label
+            Text="Parcial 1"
+            FontSize="10"
+            HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="txtNota1"          
+            Placeholder="Ingrese Nota 1"
+               Keyboard="Numeric"
+               />
+
+        <Entry x:Name="txtNota2"          
+            Placeholder="Ingrese Nota Examen Parcial 1"
+               Keyboard="Numeric"
+               />
+
+        <Button x:Name="btnParcial1"
+                Text="Nota Parcial 1"
+                Clicked="btnParcial1_Clicked"/>
+
+        <!--CAJA DE TEXTO PARCIAL 2-->
+        <Label
+            Text="Parcial 2"
+            FontSize="10"
+            HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="txtNotaP1"          
+            Placeholder="Ingrese Nota Parcial 2"
+               Keyboard="Numeric"
+               />
+
+        <Entry x:Name="txtNotaP2"          
+            Placeholder="Ingrese Nota Examen Parcial 2"
+               Keyboard="Numeric"
+               />
+
+
+        <Button x:Name="btnParcial2"
+                Text="Nota Parcial 2"
+                Clicked="btnParcial2_Clicked"/>
+
+        <!--BOTON DE NOTA FINAL-->
+        <Button x:Name="btnNotaFinal"
+                Text="Muestra Nota Final"
+                Clicked="btnNotaFinal_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
